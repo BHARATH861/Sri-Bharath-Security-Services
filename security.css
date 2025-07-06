@@ -1,0 +1,284 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+
+body {
+  font-family: Arial, sans-serif;
+  padding: 0% 5% 0% 5%;
+  background-color: #f5f5f5;
+}
+
+.top-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #ced7d3;
+  color: #127a4c;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+}
+
+.sbss h1 {
+  font-size: 24px;
+  font-family: Verdana;
+}
+  #OUR_WORKS h1 {
+  font-size: 24px;
+  font-family: Verdana;
+}
+
+.menu nav {
+  display: flex;
+  gap: 15px;
+}
+@media (max-width: 768px) {
+  fieldset {
+    width: 90%;
+    margin: 20px auto;
+  }
+
+  .menu nav {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+
+.menu nav a {
+  text-decoration: none;
+  border: 1px solid #127a4c;
+  padding: 6px 12px;
+  border-radius: 5px;
+  color: #127a4c;
+  font-weight: bold;
+  background-color: white;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.menu nav a:hover {
+  background-color: #127a4c;
+  color: white;
+}
+
+.intro {
+  margin-top: 100px;
+}
+
+header h2 {
+  margin-top: 20px;
+  font-family: Verdana;
+}
+h2 {
+      text-align: center;
+      color: #222;
+      margin-bottom: 40px;
+    }
+
+    .services-container {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .service-card {
+      background-color: #fff;
+      border-radius: 15px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      padding: 25px;
+      width: 260px;
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
+
+    .service-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .icon {
+      font-size: 35px;
+      color: #004080;
+      margin-bottom: 12px;
+    }
+
+    .title {
+      font-size: 20px;
+      font-weight: 600;
+      color: #333;
+      margin-bottom: 10px;
+    }
+
+    .desc {
+      font-size: 14px;
+      color: #555;
+      margin-bottom: 15px;
+    }
+
+#services {
+  margin-top: 40px;
+}
+.carousel-container {
+  position: relative;
+  margin: 40px 0;
+}
+
+.carousel-track {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  gap: 1rem;
+  padding: 10px;
+
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.carousel-track::-webkit-scrollbar {
+  display: none;
+}
+.carousel-track {
+  overflow-x: hidden; /* optional */
+  padding-right: 0px; /* remove gap */
+}
+
+.card {
+  min-width: 250px;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.card img {
+  width: 100%;
+  height: 150px;
+  object-fit: contain;
+}
+.desce {
+      font-size: 14px;
+      color: #555;
+      margin-bottom: 15px;
+    }
+
+.nav {
+  position: absolute;
+  top: 30%;
+  background: rgba(255, 255, 255, 0.8);
+  border: none;
+  font-size: 30px;
+  cursor: pointer;
+  z-index: 2;
+  padding: 10px;
+  border-radius: 50%;
+  box-shadow: 0 0 5px rgba(0,0,0,0.2);
+  color : skyblue;
+}
+
+.nav.prev {
+  left: -515px;
+}
+
+.nav.next {
+  right: -40px;
+}
+
+
+fieldset {
+  width: 60%;                 /* adjust as needed */
+  margin: 50px auto;          /* auto centers horizontally */
+  padding: 20px;
+  border: 2px solid yellow;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+  text-align: left;
+}
+
+
+form input, form select, form textarea {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+}
+
+button {
+  font-family: inherit;
+  font-size: 18px;
+  background: royalblue;
+  color: white;
+  padding: 0.7em 1em;
+  padding-left: 0.9em;
+  display: flex;
+  align-items: center;
+  border: none;
+  border-radius: 16px;
+  overflow: hidden;
+  transition: all 0.2s;
+  cursor: pointer;
+  margin-top: 10px;
+  margin-left: 40%;
+}
+
+button span {
+  margin-left: 0.3em;
+  transition: all 0.3s ease-in-out;
+}
+
+button svg {
+  transform-origin: center center;
+  transition: transform 0.3s ease-in-out;
+}
+
+button:hover .svg-wrapper {
+  animation: fly-1 0.6s ease-in-out infinite alternate;
+}
+
+button:hover svg {
+  transform: translateX(1.2em) rotate(45deg) scale(1.1);
+}
+
+button:hover span {
+  transform: translateX(5em);
+}
+
+button:active {
+  transform: scale(0.95);
+}
+
+@keyframes fly-1 {
+  from {
+    transform: translateY(0.1em);
+  }
+
+  to {
+    transform: translateY(-0.1em);
+  }
+}
+
+footer {
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  background-color: red;
+  color: white;
+  text-align: left;
+  padding: 10px;
+  font-size: 14px;
+}
+
+footer span {
+  float: right;
+  padding-right: 5%;
+}
